@@ -1,0 +1,13 @@
+{
+    "alunos": [
+        {
+            "codigo": 9999,
+            "nome": "Marcio",
+            "nascimento": "12/12/1990",
+            "disciplinas_cursadas": [
+                "Projeto Orientação a Objetos",
+                "Programação Web I"
+            ]
+        }
+    ]
+}

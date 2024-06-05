@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Site de Teste</title>
+</head>
+<body>
+
+    <abbr title=""></abbr>
+    <address></address>
+    <h1>Página de Testes</h1>
+    <p id="paragrafo"> Hello World!</p>
+
+    <script type="text/javascript">
+
+        // Este é nosso Hello World em Java
+        document.write("<p>Hello World</p>");
+
+        // Testando Váriaveis
+        var varString = "Esta variável armazena texto";
+        document.write("Variável String: " + varString + "<br/>");
+
+        var varInt = 10.5;
+        document.write("Váriavel Int e Float: " + varInt + "<br/>");
+
+        // Testando o If e Else
+        var saldo = 40000;
+        if (saldo >= 35340){
+            document.write("<br/> Irei comprar um carro de 0Km :-)");
+        } else {
+            document.write("<br/> Irei comprar um carro usado :-|");
+        }
+
+        // Testando o isFinite para ver se o calculo apresenta algum erro
+        var contaLouca = 30 / 0;
+        if (isFinite(contaLouca)){
+            document.write("<br/>A conta louca deu Certo! >>> " + contaLouca + "<br/>");
+        } else{
+            document.write("<br/>A conta louca deu Errado! >>> " + contaLouca + "<br/>");
+        }
+        document.write("<br/>")
+
+        // Testando o Looping For
+        for (let cont = 0; cont <= 10; cont++) {
+            document.write(cont + " ");       
+        }
+
+        // Testando o Looping While
+        document.write("<br/>")
+        var cont2 = 11;
+        while (cont2 <= 20){
+            document.write(cont2 + " ");
+            cont2++;
+        }
+
+        // Testando o Método Replace(), toLowerCase(), toUpperCase(),
+        var fraseBonita = "Estudar JavaScript é Demais!";
+        var testeReplace = fraseBonita.replace("JavaScript", "na " + "Uniasselvi");
+        document.write("<br/>" + testeReplace);
+        document.write("<br/>" + fraseBonita);
+        document.write("<br/>" + fraseBonita.toLowerCase());
+        document.write("<br/>" + fraseBonita.toUpperCase());
+        document.write("<br/><br/>");
+
+        // Testando tipos de Array()
+        // Declara um Array Vazio 
+        var array1 = new Array();
+
+        // Declara um Array com os elementos "um" e 2
+        var array2 = new Array("zero", 1);
+        document.write(array2[1] + " >> índice(1)<br/>");
+        array2[2] = "Segundo Elemento";
+        document.write(array2[2] + " >> índice(2)<br/>");
+
+        // Testando a propriedade Length
+        document.write(array2.length + "<br/>");
+
+        // Declara um Array com oito elementos, todos eles não inicializados, ou seja, estão indefinidos
+        var array3 = new Array(8);
+
+        // Testando a propriedade toString()
+        var meuArray = ["um", "dois", "tres", "quatro", "etc"];
+        document.write(meuArray.toString());
+        document.write("<br/>");
+        document.write(meuArray.join("; "));
+        // Testando a propriedade Enhanced For
+        document.write("<br/><br/> Iterando com Enhanced for: <br/>");
+        for (indice in meuArray){
+            document.write(indice + " = ");
+            document.write(meuArray[indice]);
+            document.write("<br/>");
+        }
+
+        document.write("<br/>")
+        // Declarando Funções
+        var fSoma = function(x, y){
+            var resultado = x + y;
+            return resultado;
+        }
+
+        var soma = fSoma(3, 5);
+        document.write("A Função fSoma retornou: " + soma);
+
+        // Acessando o DOM via JavaScript
+        var texto = document.getElementById("paragrafo").innerHTML;
+        alert(texto);
+
+    </script>
+</body>
+</html>

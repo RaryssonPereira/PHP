@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-witch" , initial-scale="1.0">
+    <title>Site com Inserção em Tabela</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Site com Inserção de tabela</h1>
+    </header>
+
+    <section>
+        <form id="form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+            <label for="idade">Idade:</label>
+            <input type="text" id="idade" name="idade">
+            <input type="submit" value="Adicionar">
+        </form>
+
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        document.getElementById("form").addEventListener("submit", function (even) {
+            event.preventDefault(); //evita que o formulario seja enviado
+
+            var nome = document.getElementById("nome").value;
+            var idade = document.getElementById("idade").value;
+
+            //criar novas linhas na tabela
+            var tableRef = document.getElementById("tabela").getElementsByTagName("tbody")[0];
+            var newRow = tableRef.insertRow();
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+
+            cell1.textContent = nome;
+            cell2.textContent = idade;
+
+            //limpar os campos do formulario
+            document.getElementById("nome").value = "";
+            document.getElementById("idade").value = "";
+
+        });
+    </script>
+</body>
+
+</html>
